@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
     <link rel="stylesheet" href="css/styles.css" >
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
@@ -72,7 +73,7 @@
             <div class="col-2 mt-3">
                 <a class="text-dark text-decoration-none" role="button" href="index.html">ToDoor</a>
             </div>
-            <div class="col-4 mt-2">
+            <div class="col-3 mt-2">
                 <input type="text" class="form-control border-0" placeholder="Location">
             </div>
             <div class="col-2 mt-2 dropdown">
@@ -84,6 +85,105 @@
             </div>
             <div class="col-3 mt-2">
                 <input type="text" class="form-control border-0" placeholder="Search">
+            </div>
+            <div class = "col-1 mt-2">
+                <div class="dropdown">
+                    <a role="button" class="btn btn-link text-warning" href="#" data-toggle="dropdown">
+                        <i class="fa fa-shopping-bag"> 1 </i>
+                    </a>
+                    <div class="dropdown-menu float-right">
+                        <div class="container">
+                            <div class="row mt-2">
+                                <div class="col-1">
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-8">
+                                    <h3 class="modal-title">
+                                        Milk Cream Green Tea
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="container mt-4 pt-3 bg-light">
+                            <h4>Choice of Toppings</h4>
+                            <p class="mt-n2 text-muted">Choose up to 4</p>
+                        </div>
+                        
+                        <div class="container mt-3">
+                            <div class="form-group form-check">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <input type="checkbox" class="form-check-input" id="mcboba">
+                                        <label class="form-check-label" for="#mcboba"> Boba</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <span class="text-muted">+$0.75</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <input type="checkbox" class="form-check-input" id="mcpudding">
+                                        <label class="form-check-label" for="#mcpudding">Pudding</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <span class="text-muted">+$0.75</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <input type="checkbox" class="form-check-input" id="mclyje">
+                                        <label class="form-check-label" for="#mclyje">Lychee Jelly</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <span class="text-muted">+$0.75</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <input type="checkbox" class="form-check-input" id="mcgrje">
+                                        <label class="form-check-label" for="#mcgrje">Grass Jelly</label>
+                                    </div>
+                                    <div class="col-2">
+                                        <span class="text-muted">+$0.75</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="container py-3 bg-light">
+                            <label for="specialIns">
+                                <h4>Special Instructions</h4>
+                            </label>
+                        </div>
+        
+                        <div class="container py-3">
+                            <input type="text" class="form-control border-0 ml-n2" id="specialIns" placeholder="Add a note (extra sauce, no onions, etc.)">
+                        </div>
+        
+                        <div class="container border-top py-3">
+                            <div class="row">
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-light mr-2">
+                                        <i class="fa fa-minus"></i> 
+                                    </button>
+                                    <span> 1 </span>
+                                    <button type="button" class="btn btn-light ml-2">
+                                    <i class="fa fa-plus"></i> 
+                                    </button>
+                                </div>
+                                <div class="col-8">
+                                    <button type="button" class="btn btn-dark btn-block"><h5 class="text-center">Add 1 to Order</h5></button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Navbar -->
         </div>
@@ -596,7 +696,7 @@
                             </button>
                         </div>
                         <div class="col-8">
-                            <a type="button" class="btn btn-dark btn-block" href="menu-shoppingcart.html"><h5 class="text-center text-light">Add 1 to Order</h5></a>
+                            <button type="button" class="btn btn-dark btn-block"><h5 class="text-center">Add 1 to Order</h5></button>
                         </div>
                     </div>
                     
