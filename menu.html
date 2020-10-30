@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/styles.css" >
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+    <title>ToDoor: Bring Food to your home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <nav class="navbar navbar-light d-flex justify-content-center">
+                    <!-- Dropdown Navbar -->
+                    <button class="navbar-toggler" type="button" data-target="#toDoorNavBar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sidenav" id="toDoorNavBar">
+                        <ul class="navbar-nav ml-5">
+                            <li class="nav-item mr-2">
+                                <button type="button" class="close nav-link">&times;</button>
+                            </li>
+                            <li class="navbar-text">
+                                <a role="button" data-toggle="modal" data-target="#signinModal">
+                                    <i class="fa fa-sign-in"></i> Sign in
+                                </a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Orders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> Favorites</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Wallet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Help</a></li>
+                        </ul>
+                    </div>
+                    <!-- Dropdown Navbar -->
+                    <!-- Signin Modal -->
+                    <div class="modal fade" id="signinModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header mx-auto">
+                                    <h3>ToDoor</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <h5><bold>Welcome back</bold></h5>
+                                    
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputEmail">Sign in with your email address or mobile number</label>
+                                            <input class="form-control" id="inputEmail" placeholder="Email or mobile number">
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-center form-control border-0 bg-light" id="nextButton">
+                                        <a class="mx-auto" role="button">Next</a>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        New to ToDoor? <a class="text-success ml-1"> Create an account</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Signin Modal -->
+                </nav>
+            </div>
+            <!-- Navbar -->
+            <div class="col-2 mt-3">
+                <a class="text-dark text-decoration-none" role="button" href="index.html">ToDoor</a>
+            </div>
+            <div class="col-4 mt-2">
+                <input type="text" class="form-control border-0" placeholder="Location">
+            </div>
+            <div class="col-2 mt-2 dropdown">
+                <a class="btn" data-toggle="dropdown">Pickup Now</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item">Pickup Now</a>
+                    <a class="dropdown-item">Schedule For Later</a>
+                </div>
+            </div>
+            <div class="col-3 mt-2">
+                <input type="text" class="form-control border-0" placeholder="Search">
+            </div>
+            <!-- Navbar -->
+        </div>
+    </div>
+    <!--Banner-->
+    <div class="menuBanner">
+        <div class="container">
+            <div class="row pt-5 mb-5">
+            </div>
+            <div class="row">
+                <div class="col-4 bg-light">
+                    <h2>Tasty Pot</h2>
+                    <p>$$ | Chinese | Seafood</p>
+                    <p>25-35 Min - 4.8(38) - $0.49 Delivery Fee</p>
+                    <p>194 Harvard Ave, Boston, MA 02134</p>
+                </div>
+            </div>
+            <div class="row pt-5 mt-5">
+            </div>
+        </div>
+    </div>
+    <!--Banner-->
+    <!--Food Menu-->
+    <div class="container">
+        <ul class="nav border-bottom">
+            <li class="nav-item border-bottom border-dark" role="presentation" id="menu-tab">
+                <a class="nav-link active text-dark" data-toggle="tab" href="#menu" role="tab">
+                    <h5 class="mb-n1">Menu</h5>
+                    <small class="text-muted">11:00 AM - 3:00 PM</small>
+                </a>
+            </li>
+            <li class="nav-item border-dark" role="presentation" id="dinner-tab">
+                <a class="nav-link text-dark"  data-toggle="tab" href="#dinner" role="tab">
+                    <h5 class="mb-n1">Dinner</h5>
+                    <small class="text-muted">11:05 AM - 9:30 PM</small>
+                </a>
+            </li>
+            <li class="nav-item border-dark" role="presentation" id="lunch-tab">
+                <a class="nav-link text-dark" data-toggle="tab" href="#lunch" role="tab">
+                    <h5 class="mb-n1">Lunch</h5>
+                    <small class="text-muted">Thu 11:00 AM - 11:30 AM</small>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <!-- Menu list -->
+            <div class="tab-pane fade show active" id="menu" role="tabpanel">
+                <nav class="nav-bar mt-3 mb-5 sticky-top bg-white">
+                        <a class="btn" role="button" href="#mustache">Mustache</a>
+                        <a class="btn" role="button" href="#milk-tea">Milk Tea</a>
+                        <a class="btn" role="button" href="#tea">Tea</a>
+                        <a class="btn" role="button" href="#milk-matcha">Milk and Matcha</a>
+                        <a class="btn" role="button" href="#juice">Juice</a>
+                        <a class="btn" role="button" href="#soda">Soda</a>
+                </nav>
+                <!--Mustache-->
+                <div class="container">
+                    <h4 id="mustache">Mustache</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h" role="button" data-toggle="modal" data-target="#itemModal">
+                            <p>Milk Cream Green Tea</p>
+                            <p>$4.75</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Milk Cream Black Tea</p>
+                            <p>$4.75</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Milk Cream Coffee</p>
+                            <p>$4.75</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Milk Cream Winter Melon</p>
+                            <p>$4.75</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Milk Tea-->
+                <div class="container mt-5">
+                    <h4 id="milk-tea">Milk Tea</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Hokkaido Milk Tea</p>
+                            <p>$4.75</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Milk Tea</p>
+                            <p>$4.50</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Half and Half Milk Tea</p>
+                            <p>$4.95</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Fresh Milk Tea</p>
+                            <p>$4.50</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Thai Milk Tea</p>
+                            <p>$4.50</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Taro Milk Tea</p>
+                            <p>$4.75</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Rose Milk Green Tea</p>
+                            <p>$4.75</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Milk Tea-->
+                <!-- Tea -->
+                <div class="container mt-5">
+                    <h4 id="tea">Tea</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Green Tea</p>
+                            <p>$3.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Old Time Black Tea</p>
+                            <p>$3.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Passion Fruit Green Tea</p>
+                            <p>$4.25</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Passion Fruit Black Tea</p>
+                            <p>$4.25</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Mango Green Tea</p>
+                            <p>$3.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border">
+                            <p>Mango Black Tea</p>
+                            <p>$4.25</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tea -->
+                <!-- Milk and Matcha-->
+                <div class="container mt-5">
+                    <h4 id="milk-matcha">Milk and Matcha</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Sweet Milk with Boba</p>
+                            <p>$4.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Sweet Milk with Grass Jelly</p>
+                            <p>$4.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Sweet Milk with Pudding</p>
+                            <p>$4.95</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Matcha Latte with Boba</p>
+                            <p>$4.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Rose Matcha Latte with Boba</p>
+                            <p>$4.95</p>
+                        </div>
+                        <div class="col-4 col-lg-3">
+                        </div>
+                    </div>
+                </div>
+                <!-- Milk and Matcha-->
+                <!-- Juice -->
+                <div class="container mt-5">
+                    <h4 id="juice">Juice</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Old Plum Juice and Lemon</p>
+                            <p>$3.75</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Winter Melon Juice and Lemon</p>
+                            <p>$3.75</p>
+                        </div>
+                        <div class="col-4 col-lg-3"></div>
+                    </div>
+                </div>
+                <!-- Juice -->
+                <!-- Soda -->
+                <div class="container mt-5">
+                    <h4 id="soda">Soda</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Coke</p>
+                            <p>$2.50</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Diet Coke</p>
+                            <p>$2.50</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Sprite</p>
+                            <p>$2.50</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soda -->
+            </div>
+            <!-- Dinner -->
+            <div class="tab-pane fade" id="dinner" role="tabpanel">
+                <div class="container">
+                    <div class="row mt-3 mb-5">
+                        <a class="btn" role="button" href="#mains">Mains</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <h4 id="mains">Mains</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Beef Hot Soup</p>
+                            <p class="text-muted">Napa, beef slice, vermicelli, enoki, mushroom, taro tomato, tofu,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Lamb Hot Soup</p>
+                            <p class="text-muted">Napa, lamb slice, vermicelli, enoki, mushroom, imitation crabmeat,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Cheesy Milk Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, vermicelli, mini sausage,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Curry Flavor Hot Soup</p>
+                            <p class="text-muted">Napa, pork slice, vermicelli, tomato, corn, egg, enoki mushroom,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Stinky Tofu Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, fermented tofu, vermicelli, enoki...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Healthy Veggie Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, vermicelli, enoki mushroom, tomato, corn, lotus root...</p>
+                            <p>$16.99</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Kimchi Dumpling Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slices, kimchi, dumpling, vermicelli, mini...</p>
+                            <p>$16.99</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Thai Flavor Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, taro stem, enoki mushrrom,...</p>
+                            <p>$19.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Taiwanese Supreme Spicy Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, instant noodle, beef slices, beef tendon, enoki...</p>
+                            <p>$19.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Dinner -->
+            <!-- Lunch --> 
+            <div class="tab-pane fade" id="lunch" role="tabpanel">
+                <div class="container">
+                    <div class="row mt-3 mb-5">
+                        <a class="btn" role="button" href="#mains-lunch">Mains</a>
+                    </div>
+                </div>
+                <div class="container">
+                    <h4 id="mains-lunch">Mains</h4>
+                </div>
+                <div class="container">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Beef Hot Soup</p>
+                            <p class="text-muted">Napa, beef slice, vermicelli, enoki, mushroom, taro tomato, tofu,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Lamb Hot Soup</p>
+                            <p class="text-muted">Napa, lamb slice, vermicelli, enoki, mushroom, imitation crabmeat,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Cheesy Milk Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, vermicelli, mini sausage,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Curry Flavor Hot Soup</p>
+                            <p class="text-muted">Napa, pork slice, vermicelli, tomato, corn, egg, enoki mushroom,...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Stinky Tofu Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, fermented tofu, vermicelli, enoki...</p>
+                            <p>$16.99</p>
+                            <p class="text-muted">Contain Nuts</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Healthy Veggie Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, vermicelli, enoki mushroom, tomato, corn, lotus root...</p>
+                            <p>$16.99</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 d-flex justify-content-between">
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Kimchi Dumpling Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slices, kimchi, dumpling, vermicelli, mini...</p>
+                            <p>$16.99</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Thai Flavor Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, pork slice, taro stem, enoki mushrrom,...</p>
+                            <p>$19.99</p>
+                            <p class="text-muted">Spicy</p>
+                        </div>
+                        <div class="col-4 col-lg-3 border h">
+                            <p>Taiwanese Supreme Spicy Hot Soup</p>
+                            <p class="text-muted">Taiwanese cabbage, instant noodle, beef slices, beef tendon, enoki...</p>
+                            <p>$19.99</p>
+                            <p class="text-muted">Spicy and Contain Nuts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <!-- Lunch -->
+        </div>
+    </div>
+    <!--Food Menu-->
+    <footer>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-3 d-flex align-items-start flex-column">
+                    <h4 class="mb-auto">ToDoor</h4>
+                    <h4>Logo</h4>
+                </div>
+                <div class="col-3 ml-auto">
+                    <p>About ToDoor</p>
+                    <p>Read our blog</p>
+                    <p>Buy gift cards</p>
+                    <p>Create a business account</p>
+                    <p>Add your restaurant</p>
+                    <p>Sign up to deliver</p>
+                </div>
+                <div class="col-3">
+                    <p>Get Help</p>
+                    <p>Read FAQs</p>
+                    <p>View all cities</p>
+                    <p>View all countries</p>
+                    <p>Restaurants near me</p>
+                    <p>Languages</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 pb-5 border-top">
+            <div class="row mt-3">
+                <div class="col-2">
+                    Social Media
+                </div>
+                <div class="col-2">
+                    Privacy Policy
+                </div>
+                <div class="col-1">
+                    Terms
+                </div>
+                <div class="col-1">
+                    Pricing
+                </div>
+                <div class="col-3">
+                    Do not sell my info(California)
+                </div>
+                <div class="col-3">
+                    ToDoor Technologies Inc.
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="itemModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="container">
+                    <div class="row mt-2">
+                        <div class="col-1">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span>&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-8">
+                            <h3 class="modal-title">
+                                Milk Cream Green Tea
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="container mt-4 pt-3 bg-light">
+                    <h4>Choice of Toppings</h4>
+                    <p class="mt-n2 text-muted">Choose up to 4</p>
+                </div>
+                
+                <div class="container mt-3">
+                    <div class="form-group form-check">
+                        <div class="row">
+                            <div class="col-10">
+                                <input type="checkbox" class="form-check-input" id="mcboba">
+                                <label class="form-check-label" for="#mcboba"> Boba</label>
+                            </div>
+                            <div class="col-2">
+                                <span class="text-muted">+$0.75</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <input type="checkbox" class="form-check-input" id="mcpudding">
+                                <label class="form-check-label" for="#mcpudding">Pudding</label>
+                            </div>
+                            <div class="col-2">
+                                <span class="text-muted">+$0.75</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <input type="checkbox" class="form-check-input" id="mclyje">
+                                <label class="form-check-label" for="#mclyje">Lychee Jelly</label>
+                            </div>
+                            <div class="col-2">
+                                <span class="text-muted">+$0.75</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10">
+                                <input type="checkbox" class="form-check-input" id="mcgrje">
+                                <label class="form-check-label" for="#mcgrje">Grass Jelly</label>
+                            </div>
+                            <div class="col-2">
+                                <span class="text-muted">+$0.75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container py-3 bg-light">
+                    <label for="specialIns">
+                        <h4>Special Instructions</h4>
+                    </label>
+                </div>
+
+                <div class="container py-3">
+                    <input type="text" class="form-control border-0 ml-n2" id="specialIns" placeholder="Add a note (extra sauce, no onions, etc.)">
+                </div>
+
+                <div class="container border-top py-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-light mr-2">
+                                <i class="fa fa-minus"></i> 
+                            </button>
+                            <span> 1 </span>
+                            <button type="button" class="btn btn-light ml-2">
+                            <i class="fa fa-plus"></i> 
+                            </button>
+                        </div>
+                        <div class="col-8">
+                            <button type="button" class="btn btn-dark btn-block"><h5 class="text-center">Add 1 to Order</h5></button>
+                        </div>
+                    </div>
+                    
+                </div>
+              </div>
+            </div>
+        </div>
+    </footer>
+    <div id="mask">
+    </div>
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
