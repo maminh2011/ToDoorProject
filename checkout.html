@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" >
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+    <title>ToDoor: Bring Food to your home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1">
+                <nav class="navbar navbar-light d-flex justify-content-center">
+                    <!-- Dropdown Navbar -->
+                    <button class="navbar-toggler" type="button" data-target="#toDoorNavBar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sidenav fixed-top" id="toDoorNavBar">
+                        <ul class="navbar-nav ml-5">
+                            <li class="nav-item mr-2">
+                                <button type="button" class="close nav-link">&times;</button>
+                            </li>
+                            <li class="navbar-text">
+                                <a role="button" data-toggle="modal" data-target="#signinModal">
+                                    <i class="fa fa-sign-in"></i> Sign in
+                                </a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Orders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> Favorites</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Wallet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Help</a></li>
+                        </ul>
+                    </div>
+                    <!-- Dropdown Navbar -->
+                    <!-- Signin Modal -->
+                    <div class="modal fade" id="signinModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header mx-auto">
+                                    <h3>ToDoor</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <h5><bold>Welcome back</bold></h5>
+                                    
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputEmail">Sign in with your email address or mobile number</label>
+                                            <input class="form-control" id="inputEmail" placeholder="Email or mobile number">
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-center form-control border-0 bg-light" id="nextButton">
+                                        <a class="mx-auto" role="button">Next</a>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        New to ToDoor? <a class="text-success ml-1"> Create an account</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Signin Modal -->
+                </nav>
+            </div>
+            <div class="col-2 mt-3 mr-auto">
+                <a class="text-dark text-decoration-none" role="button" href="index.html"><h3>To<span style="color: orange;">Door</span></h3></a>
+            </div>
+            <div class = "col-1 mt-3 mr-n3">
+                <a role="button" class="shopping-bag-button btn btn-link text-warning" href="#">
+                    <i class="fa fa-shopping-bag"> 1 </i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-cart fixed-top" style="display:none">
+        <div class="dropdown-container float-right">
+            <div class="container">
+                <div class="row mt-2">
+                    <div class="col-1">
+                        <button type="button" class="close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <h2 class="modal-title">
+                            Your Order
+                        </h2>
+                        <p><span class="text-muted">From </span> <span><a class="text-success" href="#">Tasty Pot</a></span></p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <a role="button" class="btn btn-light font-weight-bold">Start Group Order</a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-2">
+                        <div class="form-group border-bottom">
+                            <select class="form-control bg-light border-0" id="numOrders">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h5 class="mt-2 font-weight-bold"> Milk Cream Green Tea</h5>
+                    </div>
+                    
+                    <div class="col">
+                        <p class="mt-2">$4.75</p>
+                    </div>
+                </div>
+                <div class="row mt-2 bg-light">
+                    <div class="col-11">
+                        <div class="form-group mt-2">
+                            <label class="form-check-label font-weight-bold" for="requests">
+                                Request utensils, straws, etc.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group mt-2">
+                            <input class="form-check-input" type="checkbox" id="requests">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="form-group mt-2">
+                            <input type="text" class="form-control bg-light border-0 py-4" placeholder="Add a note for the store">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <a class="btn btn-dark btn-block py-3" href="checkout.html" role="button">Next: Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-6 mt-4">
+                <div class="row justify-content-between border-bottom pb-4">
+                    <div class="col-8">
+                        <h3>Delivery Details</h3>
+                    </div>
+                    <div class="col-2">
+                        <a role="button" class="btn btn-light">Edit</a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12">
+                        <span class="d-block">1800 Brighton Ave, Brighton, MA 02135, USA</span>
+                        <span class="d-block text-muted">Meet at door</span>
+                        <span class="d-block"><u><strong>Add delivery instructions</strong></u></span>
+                    </div>
+                </div>
+                <div class="row justify-content-between mt-4">
+                    <div class="col-6">
+                        <h3>Delivery time</h3>
+                    </div>
+                    <div class="col-4 mr-n5">
+                        <h3>30-40 min</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a role="button" class="btn btn-outline-dark d-block py-2" href="#">Standard</a>
+                        <a role="button" class="btn btn-outline-dark d-block py-2 mt-3" href="#">Schedule</a>
+                    </div>
+                </div>
+                <div class="row justify-content-between border-bottom mt-4 pb-4">
+                    <div class="col-4">
+                        <h3>Payment</h3>
+                    </div>
+                    <div class="col-2">
+                        <a role="button" class="btn btn-light">Edit</a>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <a class="btn btn-social-icon btn-bitbucket" href="#"><i class="fa fa-cc-visa"></i></a>
+                        <span class="ml-4"><strong>Visa - 1234</strong></span>
+                    </div>
+                </div>
+                <div class="row border-bottom mt-4">
+                    <div class="col">
+                        <h3>Show your support with a tip</h3>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <span class="text-muted">Delivery people are critical to our communities at this time. Add a tip to say thanks.</span>
+                    </div>
+                </div>
+                <div class="row justify-content-between mt-3">
+                    <div class="col-2 bg-light ml-3">
+                        <span class="ml-2"><strong>15%</strong></span>
+                        <span class="ml-2">$1.79</span>
+                    </div>
+                    <div class="col-2 bg-light">
+                        <span class="ml-2"><strong>20%</strong></span>
+                        <span class="ml-2">$2.39</span>
+                    </div>
+                    <div class="col-2 bg-light">
+                        <span class="ml-2"><strong>25%</strong></span>
+                        <span class="ml-2">$2.98</span>
+                    </div>
+                    <div class="col-2 bg-light">
+                        <span class="ml-2"><strong>30%</strong></span>
+                        <span class="ml-2">$3.58</span>
+                    </div>
+                    <div class="col-2 bg-light">
+                        <span class="ml-2"><strong>Edit</strong></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-4 mt-4">
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            <i class="fa fa-shopping-bag fa-lg mr-2"></i>From <strong><u> Tasty Pot</u></strong>
+                        </p>
+                    </div>    
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>
+                            <i class="fa fa-clock-o fa-lg mr-2"></i>Arriving in 35-45 min
+                        </p>
+                    </div>    
+                </div>
+                <div class="row border-bottom">
+                    <div class="col">
+                        <p>
+                            <i class="fa fa-map-marker fa-lg ml-1 mr-2"></i>Meet at door, Brighton Ave
+                        </p>
+                    </div> 
+                </div>   
+                <div class="row mt-3">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                Subtotal - <strong><u>1 item</u></strong>
+                            </div>
+                            <div class="col-2 mr-1">
+                                $4.75
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                Service Fee
+                            </div>
+                            <div class="col-2 mr-1">
+                                $2.50
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                Delivery Fee
+                            </div>
+                            <div class="col-2 mr-1">
+                                $2.49
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                Tip
+                            </div>
+                            <div class="col-2 mr-1">
+                                $2.39
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                Taxes
+                            </div>
+                            <div class="col-2 mr-1">
+                                $0.46
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <div class="row justify-content-between">
+                            <div class="col-6">
+                                <strong>Total</strong>
+                            </div>
+                            <div class="col-2 mr-2">
+                                <strong>$11.85</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+                        <a role="button" class="btn btn-success d-block" href="#">Place Order</a>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">
+                        <a role="button" class="btn d-block" href="#"><strong><u>Add promo code</u></strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-3 d-flex align-items-start flex-column">
+                    <a class="text-dark text-decoration-none mb-auto" role="button" href="index.html"><h4>To<span style="color: orange;">Door</span></h4></a>
+                    <h4>Logo</h4>
+                </div>
+                <div class="col-3 ml-auto">
+                    <p>About ToDoor</p>
+                    <p>Read our blog</p>
+                    <p>Buy gift cards</p>
+                    <p>Create a business account</p>
+                    <p>Add your restaurant</p>
+                    <p>Sign up to deliver</p>
+                </div>
+                <div class="col-3">
+                    <p>Get Help</p>
+                    <p>Read FAQs</p>
+                    <p>View all cities</p>
+                    <p>View all countries</p>
+                    <p>Restaurants near me</p>
+                    <p>Languages</p>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5 pb-5 border-top">
+            <div class="row mt-3">
+                <div class="col-2">
+                    Social Media
+                </div>
+                <div class="col-2">
+                    Privacy Policy
+                </div>
+                <div class="col-1">
+                    Terms
+                </div>
+                <div class="col-1">
+                    Pricing
+                </div>
+                <div class="col-3">
+                    Do not sell my info(California)
+                </div>
+                <div class="col-3">
+                    ToDoor Technologies Inc.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="mask">
+    </div>
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

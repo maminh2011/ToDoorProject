@@ -56,10 +56,26 @@ $(function() {
 
     $(".h").mouseenter(function() {
         $(this).addClass("border-dark");
-    })
+    });
 
     $(".h").mouseleave(function() {
         $(this).removeClass("border-dark");
+    });
+
+    $('.dropdown-cart .close').click(function() {
+        hideDropDown();
+    });
+
+    $('.shopping-bag-button').click(function() {
+        showDropDown();
+    });
+
+    $('.navbar-toggler-icon').click(function() {
+        $('.sticky-top').hide();
+    });
+
+    $('#toDoorNavBar .close').click(function() {
+        $('.sticky-top').show();
     })
 });
 
@@ -80,3 +96,10 @@ function changeColor() {
 
 inputEvent.addEventListener('keyup', changeColor);
 
+function hideDropDown() {
+    $('.dropdown-cart').hide();
+}
+
+function showDropDown() {
+    $('.dropdown-cart').show();
+}

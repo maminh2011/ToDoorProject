@@ -23,20 +23,20 @@
                     <button class="navbar-toggler" type="button" data-target="#toDoorNavBar">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse sidenav" id="toDoorNavBar">
+                    <div class="collapse navbar-collapse sidenav fixed-top" id="toDoorNavBar">
                         <ul class="navbar-nav ml-5">
                             <li class="nav-item mr-2">
                                 <button type="button" class="close nav-link">&times;</button>
                             </li>
                             <li class="navbar-text">
                                 <a role="button" data-toggle="modal" data-target="#signinModal">
-                                    <i class="fa fa-sign-in"></i> Sign in
+                                    Sign in
                                 </a>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Orders</a></li>
-                            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> Favorites</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Wallet</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i> Help</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> Orders</a></li>
+                            <li class="nav-item"><a class="nav-link" href="aboutus.html">Favorites</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#"> Wallet</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contactus.html">Help</a></li>
                         </ul>
                     </div>
                     <!-- Dropdown Navbar -->
@@ -45,7 +45,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header mx-auto">
-                                    <h3>ToDoor</h5>
+                                    <h3>ToDoor</h3>
                                 </div>
                                 <div class="modal-body">
                                     <h5><bold>Welcome back</bold></h5>
@@ -71,7 +71,7 @@
             </div>
             <!-- Navbar -->
             <div class="col-2 mt-3">
-                <a class="text-dark text-decoration-none" role="button" href="index.html">ToDoor</a>
+                <a class="text-dark text-decoration-none" role="button" href="index.html"><h3>To<span style="color: orange;">Door</span></h3></a>
             </div>
             <div class="col-3 mt-2">
                 <input type="text" class="form-control border-0" placeholder="Location">
@@ -87,106 +87,87 @@
                 <input type="text" class="form-control border-0" placeholder="Search">
             </div>
             <div class = "col-1 mt-2">
-                <div class="dropdown">
-                    <a role="button" class="btn btn-link text-warning" href="#" data-toggle="dropdown">
+                
+                    <a role="button" class="shopping-bag-button btn btn-link text-warning" href="#">
                         <i class="fa fa-shopping-bag"> 1 </i>
                     </a>
-                    <div class="dropdown-menu float-right">
-                        <div class="container">
-                            <div class="row mt-2">
-                                <div class="col-1">
-                                    <button type="button" class="close" data-dismiss="modal">
-                                        <span>&times;</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-8">
-                                    <h3 class="modal-title">
-                                        Milk Cream Green Tea
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="container mt-4 pt-3 bg-light">
-                            <h4>Choice of Toppings</h4>
-                            <p class="mt-n2 text-muted">Choose up to 4</p>
-                        </div>
-                        
-                        <div class="container mt-3">
-                            <div class="form-group form-check">
-                                <div class="row">
-                                    <div class="col-10">
-                                        <input type="checkbox" class="form-check-input" id="mcboba">
-                                        <label class="form-check-label" for="#mcboba"> Boba</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="text-muted">+$0.75</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-10">
-                                        <input type="checkbox" class="form-check-input" id="mcpudding">
-                                        <label class="form-check-label" for="#mcpudding">Pudding</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="text-muted">+$0.75</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-10">
-                                        <input type="checkbox" class="form-check-input" id="mclyje">
-                                        <label class="form-check-label" for="#mclyje">Lychee Jelly</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="text-muted">+$0.75</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-10">
-                                        <input type="checkbox" class="form-check-input" id="mcgrje">
-                                        <label class="form-check-label" for="#mcgrje">Grass Jelly</label>
-                                    </div>
-                                    <div class="col-2">
-                                        <span class="text-muted">+$0.75</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-        
-                        <div class="container py-3 bg-light">
-                            <label for="specialIns">
-                                <h4>Special Instructions</h4>
-                            </label>
-                        </div>
-        
-                        <div class="container py-3">
-                            <input type="text" class="form-control border-0 ml-n2" id="specialIns" placeholder="Add a note (extra sauce, no onions, etc.)">
-                        </div>
-        
-                        <div class="container border-top py-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <button type="button" class="btn btn-light mr-2">
-                                        <i class="fa fa-minus"></i> 
-                                    </button>
-                                    <span> 1 </span>
-                                    <button type="button" class="btn btn-light ml-2">
-                                    <i class="fa fa-plus"></i> 
-                                    </button>
-                                </div>
-                                <div class="col-8">
-                                    <button type="button" class="btn btn-dark btn-block"><h5 class="text-center">Add 1 to Order</h5></button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+                      
             </div>
             <!-- Navbar -->
         </div>
+    </div>
+    <div class="dropdown-cart fixed-top" style="display:none">
+        <div class="dropdown-container float-right">
+            <div class="container">
+                <div class="row mt-2">
+                    <div class="col-1">
+                        <button type="button" class="close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <h2 class="modal-title">
+                            Your Order
+                        </h2>
+                        <p><span class="text-muted">From </span> <span><a class="text-success" href="#">Tasty Pot</a></span></p>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-8">
+                        <a role="button" class="btn btn-light font-weight-bold">Start Group Order</a>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-2">
+                        <div class="form-group border-bottom">
+                            <select class="form-control bg-light border-0" id="numOrders">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <h5 class="mt-2 font-weight-bold"> Milk Cream Green Tea</h5>
+                    </div>
+                    
+                    <div class="col">
+                        <p class="mt-2">$4.75</p>
+                    </div>
+                </div>
+                <div class="row mt-2 bg-light">
+                    <div class="col-11">
+                        <div class="form-group mt-2">
+                            <label class="form-check-label font-weight-bold" for="requests">
+                                Request utensils, straws, etc.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="form-group mt-2">
+                            <input class="form-check-input" type="checkbox" id="requests">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <div class="form-group mt-2">
+                            <input type="text" class="form-control bg-light border-0 py-4" placeholder="Add a note for the store">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12">
+                        <a class="btn btn-dark btn-block py-3" href="checkout.html" role="button">Next: Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
     </div>
     <!--Banner-->
     <div class="menuBanner">
